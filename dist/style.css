@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: hsl(244deg, 38%, 16%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.img-box {
+  position: relative;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(277deg, 64%, 61%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.text-context {
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.title span {
+  color: hsl(277deg, 64%, 61%);
+}
+
+.description {
+  font-size: 1rem;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  margin-bottom: 6rem;
+}
+
+.page-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+.card span {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.card p {
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .img-box {
+    order: -1;
+  }
+  .text-context {
+    padding-top: 2rem;
+  }
+  .text-context .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .text-context .description {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .page-status {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    padding-top: 1.5rem;
+  }
+  .card span {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 10px;
+  }
+  .card3 {
+    padding-right: 1rem;
+  }
+}
